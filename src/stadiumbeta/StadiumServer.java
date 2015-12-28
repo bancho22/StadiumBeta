@@ -88,8 +88,8 @@ public class StadiumServer {
                         break;
                 }
             } while (doRun);
-        } catch (IOException ex) {
-            Logger.getLogger(StadiumServer.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            connectedClientsATM.decrementAndGet();
         }
     }
 
